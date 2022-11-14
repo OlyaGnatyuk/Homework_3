@@ -7,6 +7,10 @@ public class SimpleNumber {
     }
 
     private static boolean isSimpleNumber(int number) {
+        if (number < 2) {
+            return false;
+        }
+
         boolean isSimple = true;
         for (int i = number - 1; i > 1; i--) {
             if (number % i == 0) {
